@@ -4,14 +4,14 @@ from pytest_bdd import scenarios, given, when, then, parsers
 from selenium.webdriver.chrome.webdriver import WebDriver
 from tests.pages.main_page import MainPage
 from tests.pages.buttons_page import ButtonsPage
+from main.core.utils.logger import CustomLogger
 
-scenarios('features')
+scenarios('../features')
 
 
 @fixture()
 def browser():
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    _browser = WebDriver(os.path.join(dir_path, "chromedriver.exe"))
+    _browser = WebDriver()
     yield _browser
     _browser.close()
     _browser.quit()
@@ -19,17 +19,16 @@ def browser():
 
 @given(parsers.parse('I want to test the "{section}" section'))
 def test_section(browser, section):
-    if section == 'Buttons':
-        ButtonsPage(browser).load()
+    ButtonsPage(browser).open()
 
 
-@when("I click on a buttons")
+@when("I click on a button")
 def click_on_button(browser):
     ButtonsPage(browser).click_left()
 
 
 @then(parsers.parse('I should see a confirmation message'))
-def validate_message(browser, text):
+def validate_message(browser):
     result_text = ButtonsPage(browser).get_popup_left()
     assert result_text == 'Close'
 

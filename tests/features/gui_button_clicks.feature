@@ -1,3 +1,4 @@
+#noinspection CucumberUndefinedStep
 Feature:
   Use the website to run tests
   So that I can find practice my testing skills
