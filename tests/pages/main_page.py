@@ -16,7 +16,7 @@ class MainPage:
     def __init__(self, browser):
         self.browser = browser
         self._url = BASE_URL
-        self.driver = WebDriver()
+        self.driver = WebDriver().driver
 
     def load(self):
         self.browser.get(self._url)

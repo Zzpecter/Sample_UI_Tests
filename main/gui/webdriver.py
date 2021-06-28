@@ -28,7 +28,7 @@ class WebDriver:
             self.logger.info(f'URL {BASE_URL} Launched, '
                              f'Title of the page: {self.driver.title}.')
         else:
-            print('URL did not launch successfully.')
+            self.logger.info('URL did not launch successfully.')
 
         return self.driver
 
