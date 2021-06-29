@@ -1,0 +1,56 @@
+{
+  "ui": {
+    "develop": {
+      "url": "",
+      "users": {
+        "admin": {
+          "username": "",
+          "password": ""
+        },
+        "guest": {
+          "username": "",
+          "password": ""
+        }
+      }
+    },
+    "testing": {
+      "url": "",
+      "users": {
+        "admin": {
+          "username": "",
+          "password": ""
+        },
+        "guest": {
+          "username": "",
+          "password": ""
+        }
+      }
+    },
+    "staging": {
+      "url": "",
+      "users": {
+        "admin": {
+          "username": "",
+          "password": ""
+        },
+        "guest": {
+          "username": "",
+          "password": ""
+        }
+      }
+    },
+    "production": {
+      "url": "",
+      "users": {
+        "admin": {
+          "username": "",
+          "password": ""
+        },
+        "guest": {
+          "username": "",
+          "password": ""
+        }
+      }
+    }
+  }
+}

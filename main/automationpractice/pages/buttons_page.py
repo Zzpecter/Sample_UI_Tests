@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from main.gui.utils.constants import BASE_URL, BUTTONS_PAGE_URL
-from tests.pages.base_page import BasePage
+from main.ui.utils.constants import BUTTONS_PAGE_URL
+from main.automationpractice.pages.base_page import BasePage
 from main.core.utils.logger import CustomLogger
-
 
 
 class ButtonsPage(BasePage):
@@ -16,7 +15,7 @@ class ButtonsPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.log = CustomLogger('gui-logger')
+        self.log = CustomLogger('ui-logger')
 
     def click_left(self):
         button_element = self._find(self._BUTTON_LEFT_LOCATOR)

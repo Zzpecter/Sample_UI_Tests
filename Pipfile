@@ -7,6 +7,9 @@ name = "pypi"
 pytest = "*"
 pytest-bdd = "*"
 selenium = "*"
+chromedriver-py = "*"
+get-gecko-driver = "*"
+edgedriver-autoinstaller = "*"
 
 [dev-packages]
 

@@ -37,6 +37,7 @@ class CustomLogger(logging.Logger):
 
     """
     handlers = []
+    __instance = None
 
     def __init__(self, name):
         """
@@ -60,6 +61,18 @@ class CustomLogger(logging.Logger):
         console_handler.setFormatter(formatter)
         file_handler.setFormatter(formatter)
         self.handlers = self.handlers + [console_handler, file_handler]
+
+    @staticmethod
+    def get_instance():
+        """
+        Function to return a single instance of the class.
+        Returns:
+            self: instance of the custom logger class.
+        """
+
+        if CustomLogger.__instance is None:
+            CustomLogger.__instance = CustomLogger('UI testing')
+        return CustomLogger.__instance
 
     def close(self):
         """

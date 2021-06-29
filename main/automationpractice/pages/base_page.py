@@ -1,5 +1,4 @@
-from selenium.webdriver.chrome import webdriver
-from main.gui.utils.constants import BASE_URL
+from main.ui.utils.constants import BASE_URL
 
 
 class BasePage(object):

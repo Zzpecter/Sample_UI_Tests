@@ -1,11 +1,10 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from tests.pages.base_page import BasePage
+from main.automationpractice.pages.base_page import BasePage
 
 
 class MainPage(BasePage):
 
-    from tests.pages.buttons_page import ButtonsPage
     url_path = ""
     _CONTACT_PAGE_LOCATOR = (By.ID, "contact-us")
     _BUTTONS_PAGE_LOCATOR = (By.ID, "button-clicks")
